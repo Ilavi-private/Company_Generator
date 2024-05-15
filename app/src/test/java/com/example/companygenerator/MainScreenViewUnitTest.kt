@@ -33,7 +33,7 @@ class MainScreenViewUnitTest {
 
 
     @Test
-    fun testFormulaCalculation() {
+    fun testCalculation() {
         val mean = random.nextDouble()
         val variance = random.nextDouble()
         println("Mean and variance is $mean $variance")
