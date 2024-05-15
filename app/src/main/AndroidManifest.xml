@@ -10,7 +10,7 @@
         android:label="@string/application"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AngelicaHelp"
+        android:theme="@style/Theme.CompanyGenerator"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"

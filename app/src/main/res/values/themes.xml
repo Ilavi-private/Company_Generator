@@ -5,5 +5,5 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.AngelicaHelp" parent="Base.Theme.CompanyGenerator" />
+    <style name="Theme.CompanyGenerator" parent="Base.Theme.CompanyGenerator" />
 </resources>
