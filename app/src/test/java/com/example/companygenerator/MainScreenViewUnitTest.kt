@@ -35,25 +35,24 @@ class MainScreenViewUnitTest {
     @Test
     fun testCalculation() {
         val mean = random.nextDouble()
-        val variance = random.nextDouble()
-        println("Mean and variance is $mean $variance")
+        val dispersion = random.nextDouble()
 
         viewModel.mean = mean
-        viewModel.dispersion = variance
+        viewModel.dispersion = dispersion
 
         for (i in 0..testCount){
             val result = viewModel.handleGeneration()
-            assertEquals("getResult must be >= 0, but $result",
+            assertEquals("getResult must be >= 0: $result",
                 true, result != null && result > 0)
             addNumber(result!!)
         }
 
-        checkLogNorm(
+        testLog(
             generatedNumbers,
-            exp(mean + variance / 2.0),
-            exp(2 * mean + variance) * (exp(variance) - 1),
-            sqrt(exp(variance) - 1) * (exp(variance) + 2),
-            exp(4 * variance) + 2 * exp(3 * variance) + 3 * exp(2 * variance) - 6
+            exp(mean + dispersion / 2.0),
+            exp(2 * mean + dispersion) * (exp(dispersion) - 1),
+            sqrt(exp(dispersion) - 1) * (exp(dispersion) + 2),
+            exp(4 * dispersion) + 2 * exp(3 * dispersion) + 3 * exp(2 * dispersion) - 6
         )
     }
 
@@ -61,25 +60,27 @@ class MainScreenViewUnitTest {
         generatedNumbers.add(num)
     }
 
-    private fun checkLogNorm(a: ArrayList<Double>, m: Double, v: Double, sk: Double, kur: Double) {
+    private fun testLog(a: ArrayList<Double>, m: Double, v: Double, sk: Double, kur: Double) {
         val d = a.toDoubleArray()
         val gm = StatUtils.mean(d)
         val gv = StatUtils.variance(d)
+
         val gskewness = DescriptiveStatistics(d).skewness
         val gkurtosis = DescriptiveStatistics(d).kurtosis
         println(
-            "DistributionTest " +
+            "Distribution: " +
             "${abs(gm - m)} ${abs(gv - v)} " +
                     "${abs(gskewness - sk)} ${abs(gkurtosis - kur)}"
         )
         TestCase.assertEquals("Mean is different", m, gm, meanDelta)
-        TestCase.assertEquals("Variance is different", v, gv, varianceDelta)
+        TestCase.assertEquals("Dispersion is different", v, gv, varianceDelta)
+
         TestCase.assertEquals("Skewness is different", sk, gskewness, skewnessDelta)
         TestCase.assertEquals("Kurtosis is different", kur, gkurtosis, kurtosisDelta)
     }
 
     @Test
-    fun testTextViewString() {
+    fun testTextView() {
         for (i in 0..testCount) {
             viewModel.mean = random.nextDouble()
             viewModel.dispersion = random.nextDouble()
