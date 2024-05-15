@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.angelicahelp"
+    namespace = "com.example.companygenerator"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.angelicahelp"
+        applicationId = "com.example.companygenerator"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
