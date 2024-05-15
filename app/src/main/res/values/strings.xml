@@ -1,0 +1,10 @@
+<resources>
+    <string name="application">Company generator</string>
+    <string name="mu">μ</string>
+    <string name="sigma">σ²</string>
+    <string name="button_count">Посчитать</string>
+
+    <string name="app_result">0</string>
+    <string name="zero_count">0</string>
+    <string name="empty" />
+</resources>
