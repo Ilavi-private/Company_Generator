@@ -11,7 +11,7 @@ class MainScreenView : ViewModel() {
     var mean: Double? = null  // мат ожидание
     var dispersion: Double? = null  // дисперсия
 
-    // инициализация функции для получения числа из логнормального распредеделия
+    // функциия для получения числа из логнормального распредеделия
     fun handleGeneration(): Double? {
         if (mean!! > 0 && dispersion!! >= 0)
         //ищем число
