@@ -38,14 +38,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
       - name: Set JDK
         uses: actions/setup-java@v2
         with:
           java-version: 18
           distribution: 'adopt'
-
-      - name: Execute Gradlew
-        run: chmod +x ./gradlew
 
       - name: Run tests
         run: ./gradlew test
