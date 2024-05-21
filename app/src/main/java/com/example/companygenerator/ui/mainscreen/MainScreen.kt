@@ -32,10 +32,7 @@ class MainScreen : Fragment() {
     }
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View {
         val view = inflater.inflate(R.layout.fragment_main, container, false)
 
         meanValue = view.findViewById(R.id.mean_val)
@@ -53,7 +50,7 @@ class MainScreen : Fragment() {
         // узаписываем текст на кнопке
         button.setText(R.string.button_count)
         // записываем текст в randomNum
-        randomNum.text = viewModel.randomNum?.toString()?: getString(R.string.zero_count)
+        randomNum.text = viewModel.randomNum?.toString()?: getString(R.string.app_result)
 
 
         dispersionValue.addTextChangedListener(object : TextWatcher {

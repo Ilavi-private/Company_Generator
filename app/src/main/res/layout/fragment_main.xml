@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_screen"
+    android:id="@+id/screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:rotation="0"
@@ -44,7 +44,7 @@
         android:layout_below="@+id/variance_value"
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="40dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/button_black"
         android:text="@string/button_count"
         android:textColor="@color/white" />
 
