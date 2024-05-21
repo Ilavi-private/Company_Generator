@@ -17,4 +17,4 @@
 
 <h3>Скриншоты</h3>
 
-![Screenshot_20240521_163226](https://github.com/Ilavi-private/Company_Generator/assets/83451931/fc69bbb9-98da-4006-833e-8418c8278f38)
+<img width="375px" alt="Screenshot_20240521_163226" src="https://github.com/Ilavi-private/Company_Generator/assets/83451931/fc69bbb9-98da-4006-833e-8418c8278f38"/>
