@@ -55,16 +55,16 @@ class MainScreen : Fragment() {
 
         dispersionValue.addTextChangedListener(object : TextWatcher {
 
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
                 return
             }
 
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                val input = p0.toString()  // получаем число и записываем в inout
+            override fun onTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                val input = s.toString()  // получаем число и записываем в inout
                 viewModel.dispersion = input.toDoubleOrNull()
             }
 
-            override fun afterTextChanged(p0: Editable?) {
+            override fun afterTextChanged(s: Editable?) {
                 return
             }
         })
@@ -72,17 +72,17 @@ class MainScreen : Fragment() {
         // обработчик изменеия значений в полях
         meanValue.addTextChangedListener(object : TextWatcher{
             // переопределение beforeTextChanged
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
                 return
             }
 
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                val input = p0.toString()  // присваиваем input введеный текст
+            override fun onTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                val input = s.toString()  // присваиваем input введеный текст
                 viewModel.mean = input.toDoubleOrNull()
             }
 
 
-            override fun afterTextChanged(p0: Editable?) {
+            override fun afterTextChanged(s: Editable?) {
                 return
             }
         })
@@ -95,7 +95,7 @@ class MainScreen : Fragment() {
                 // получаем и передаем число из распределения
                 randomNum.text = viewModel.randomNum.toString()
             }
-            // в противном случае оставляем текст
+            // в противном случае оставляем 0
             else randomNum.text = getString(R.string.app_result)
         }
 
