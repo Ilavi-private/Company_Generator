@@ -1,0 +1,26 @@
+R_DEF: Internal format may change without notice
+local
+color button_black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id container
+id get_random_num
+id mean_val
+id random_number_result
+id screen
+id variance_value
+layout activity_main_screen
+layout fragment_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_result
+string application
+string button_count
+string empty
+string mu
+string sigma
+style Base.Theme.CompanyGenerator
+style Theme.CompanyGenerator
+xml backup_rules
+xml data_extraction_rules

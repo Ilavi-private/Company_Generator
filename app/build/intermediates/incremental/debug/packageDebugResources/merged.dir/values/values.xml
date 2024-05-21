@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="button_black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_result">0</string>
+    <string name="application">Company generator</string>
+    <string name="button_count">Посчитать</string>
+    <string name="empty"/>
+    <string name="mu">μ</string>
+    <string name="sigma">σ²</string>
+    <style name="Base.Theme.CompanyGenerator" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.CompanyGenerator" parent="Base.Theme.CompanyGenerator"/>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rotation="0"
+    android:rotationX="0"
+    android:rotationY="0"
+    android:visibility="visible"
+    tools:context="com.example.companygenerator.ui.mainscreen.MainScreen">
+
+
+    <EditText
+        android:id="@+id/mean_val"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="false"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/mu"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:minWidth="100dp"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/variance_value"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/mean_val"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/sigma"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:minWidth="100dp"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/get_random_num"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/variance_value"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/button_black"
+        android:text="@string/button_count"
+        android:textColor="@color/white" />
+
+
+    <TextView
+        android:id="@+id/random_number_result"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/get_random_num"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/app_result" />
+</RelativeLayout>
