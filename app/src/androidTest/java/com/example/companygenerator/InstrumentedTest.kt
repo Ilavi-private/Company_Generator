@@ -208,8 +208,8 @@ internal class InstrumentedTest {
         @BeforeClass
         @JvmStatic
         fun enableAccessibilityChecks() {
-            IdlingPolicies.setMasterPolicyTimeout(5, TimeUnit.SECONDS);
-            IdlingPolicies.setIdlingResourceTimeout(5, TimeUnit.SECONDS);
+            IdlingPolicies.setMasterPolicyTimeout(5, TimeUnit.SECONDS)
+            IdlingPolicies.setIdlingResourceTimeout(5, TimeUnit.SECONDS)
         }
     }
 }
