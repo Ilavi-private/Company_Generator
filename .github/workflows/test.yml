@@ -29,8 +29,19 @@ jobs:
       - uses: gradle/gradle-build-action@v2
       - run: ./gradlew build --stacktrace
 
+
+  run-ui-test:
+    name: Unit tests
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          java-version: ]7
+          distribution: 'zulu'
+
   test:
-    name: Test
+    name: Instrumentation test
     runs-on: macos-latest
     timeout-minutes: 30
 
@@ -63,3 +74,4 @@ jobs:
           path: |
             app/build/outputs/apk/debug/*.apk
             app/build/outputs/bundle/debug/*.aab
+      
