@@ -4,7 +4,7 @@
             "outputFile": "com.example.companygenerator.app-mergeDebugResources-2:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/ilavi/_gradle_store/caches/transforms-3/f552f940aaf73922a387eaae38145fa2/transformed/appcompat-1.6.1/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "source": "/Users/ilavi/_gradle_store/caches/transforms-3/3f1a5cf6dd776075b0f6882bbdb8abf2/transformed/appcompat-1.6.1/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

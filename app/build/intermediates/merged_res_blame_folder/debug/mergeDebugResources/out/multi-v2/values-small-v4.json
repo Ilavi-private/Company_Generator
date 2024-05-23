@@ -4,7 +4,7 @@
             "outputFile": "com.example.companygenerator.app-mergeDebugResources-2:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "/Users/ilavi/_gradle_store/caches/transforms-3/aaa84c006e1864efa5f7cec02006cda9/transformed/material-1.12.0/res/values-small-v4/values-small-v4.xml",
+                    "source": "/Users/ilavi/_gradle_store/caches/transforms-3/65a5a26755e7ff10d3524d9843eb23b1/transformed/material-1.12.0/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
