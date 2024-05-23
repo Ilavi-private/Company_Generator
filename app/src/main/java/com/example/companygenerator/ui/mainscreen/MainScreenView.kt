@@ -1,13 +1,19 @@
 package com.example.companygenerator.ui.mainscreen  //gfrtn c класс MainScreen
 
 import androidx.lifecycle.ViewModel
+
 import java.lang.Math.PI
 import java.util.Random
+import kotlin.math.cos
+import kotlin.math.exp
 import kotlin.math.ln
+import kotlin.math.sqrt
 
 
 class MainScreenView : ViewModel() {
-    var randomNum: Double? = null  // случайное число
+    var randomNum: Double? = null
+        private set
+    // случайное число
     var mean: Double? = null  // мат ожидание
     var dispersion: Double? = null  // дисперсия
 
@@ -25,9 +31,9 @@ class MainScreenView : ViewModel() {
         val u1 = Random().nextDouble()  // выбираем случайные числа
         val u2 = Random().nextDouble()
 
-        val z = kotlin.math.sqrt(-2.0 * ln(u1)) * kotlin.math.cos(2.0 * PI * u2)  // подсчитываем z
+        val z = sqrt(-2.0 * ln(u1)) * cos(2.0 * PI * u2)  // подсчитываем z
 
-        return kotlin.math.exp(mu + kotlin.math.sqrt(sigma) * z)  // вычисляем экспоненту по заданной формуле
+        return exp(mu + sqrt(sigma) * z)  // вычисляем экспоненту по заданной формуле
     }
 
 }
