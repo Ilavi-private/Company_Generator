@@ -64,11 +64,24 @@ jobs:
       - name: Run Detekt
         run: ./gradlew detekt
 
+      - name: Build APK
+        run: ./gradlew assembleDebug bundleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: app-artifacts
+          path: |
+            app/build/outputs/apk/debug/*.apk
+            app/build/outputs/bundle/debug/*.aab
 
   deplyoy-apk:
     name: Upload APK
     runs-on: macos-latest
     steps:
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
       - name: Build APK
         run: ./gradlew assembleDebug bundleDebug
 
