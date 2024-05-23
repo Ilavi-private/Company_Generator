@@ -64,6 +64,11 @@ jobs:
       - name: Run Detekt
         run: ./gradlew detekt
 
+
+  deplyoy-apk:
+    name: Upload APK
+    runs-on: macos-latest
+    steps:
       - name: Build APK
         run: ./gradlew assembleDebug bundleDebug
 
@@ -74,4 +79,3 @@ jobs:
           path: |
             app/build/outputs/apk/debug/*.apk
             app/build/outputs/bundle/debug/*.aab
-      
